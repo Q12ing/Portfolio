@@ -15,3 +15,28 @@ const pfWrap = new Swiper ('.wrap',{
         }
     },
 })
+
+const popup_bg = document.querySelector('.popup_bg');
+popup_bg.style.display = 'none' //팝업 숨기기
+
+const banner = new Swiper ('.design1',{
+    autoplay:{delay:0,},
+    loop:true,
+    speed:4000,
+    slidesPerView:3,
+});
+const sns = new Swiper ('.design2',{
+    autoplay:{delay:0,},
+    loop:true,
+    speed:6000,
+    slidesPerView:3,
+});
+const longImg = new Swiper ('.design3',{
+    autoplay:{delay:3000,},
+    effect:'fade',
+    loop:true,
+    pagination:{
+        el:'.design3_set .swiper-pagination',
+        type:'bullets',
+    },
+});
