@@ -1,0 +1,146 @@
+header {
+    background-color:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.05);
+    padding:0 80px; display:flex; justify-content:space-between; align-items:center;
+    position:fixed; width:100%; height:80px; left:0; top:0; z-index:999; 
+}
+header nav {letter-spacing:-0.02em;}
+header nav a {display:inline-block; padding:30px; border-bottom:3px solid #fff; transition:all 0.3s;}
+header nav a:hover {border-bottom-color:#3c74f2;}
+header nav .active {border-bottom-color:#3c74f2; color:#3c74f2}
+header .contact {font-size:0.94rem; color:#fff; background:#3c74f2; padding:12px 12px; border-radius:5px;}
+/* =========================================================헤더 높이 80px */
+.wrap {width:1920px; height:max-content; height:100vh;}
+.wrap > .swiper-wrapper > .swiper-slide {padding-top:80px;}/* 공통 상단 여백(header 피하기) */
+/* 공통 클래스 */
+.color {color:#3c74f2;}
+.mytag {color:#555; font-size:0.88em; margin-bottom:15px;}
+.center {text-align:center;}
+.speechbubble {text-align:center;}
+.speechbubble p {}
+.speechbubble .speech {
+    display:inline-block; font-size:1.25rem; line-height:1.5; letter-spacing:-0.02em;
+    padding:10px 14px; border-radius:20px; background:#f0f0f0;
+}
+.speechbubble p img {position:relative; bottom:5px;}
+/* =================================================================1. intro */
+.wrap #intro {
+    background-image:url(../images/intro_bg.jpg);
+    background-position:center;
+    background-size:cover;
+    position:relative;
+}
+.wrap #intro .center {position:absolute; top:30%; left:50%; transform:translateX(-50%);}
+.wrap #intro .center .speechbubble {}
+.wrap #intro .center .speechbubble .speech{}
+.wrap #intro .center .speechbubble p {}
+.wrap #intro .center .speechbubble p img{}
+.wrap #intro .center h1 {font-size:5.31rem; letter-spacing:-0.02em; font-weight:800; color:#333; margin:30px 0;}
+.wrap #intro .center h2 {font-size:2.25rem; letter-spacing:-0.02em; font-weight:300; color:#333;}
+.wrap #intro .btn {position:absolute; bottom:15%; left:50%; transform:translateX(-50%);}
+.wrap #intro .btn a:first-child {margin-right:40px;}
+.wrap #intro .btn a:hover {box-shadow:0 0 7px rgba(60,116,242,0.8);}
+.wrap #intro .btn a {font-size:1.13rem; font-weight:300; color:#fff; background:#3c74f2; padding:15px 25px; border-radius:30px;}
+/* =================================================================2. profile */
+.wrap #profile {background:#FBFAFA;}
+.wrap #profile .pf_top {width:max-content; margin:0 auto; display:flex; flex-flow:row nowrap; align-items:center;}
+.wrap #profile .pf_top .pic_info {display:flex; flex-flow:row nowrap; align-items:flex-end; margin-top:120px;}
+.wrap #profile .pf_top .pic_info .my_pic {width:360px; height:320px;}
+.wrap #profile .pf_top .pic_info .my_pic img {width:100%;}
+.wrap #profile .pf_top .pic_info .my_info {margin-left:40px; padding-bottom:40px;}
+.wrap #profile .pf_top .pic_info .my_info .mytag  {}
+.wrap #profile .pf_top .pic_info .my_info h2 {
+    font-size:2.25rem; font-weight:800; line-height:1.5; letter-spacing:-0.02em;
+    margin-bottom:50px;
+}
+.wrap #profile .pf_top .pic_info .my_info h2 em {background:#3c74f2; font-weight:600; color:#fff; padding:2px 5px;}
+.wrap #profile .pf_top .pic_info .my_info .pf {width:530px; display:flex; flex-flow:row wrap;}
+.wrap #profile .pf_top .pic_info .my_info .pf > * {font-size:1.13rem; letter-spacing:-0.04em;}
+.wrap #profile .pf_top .pic_info .my_info li:nth-child(1),
+.wrap #profile .pf_top .pic_info .my_info li:nth-child(3) {width:35%;}
+.wrap #profile .pf_top .pic_info .my_info li:nth-child(2), 
+.wrap #profile .pf_top .pic_info .my_info li:nth-child(4) {width:60%;}
+.wrap #profile .pf_top .pic_info .my_info li {margin-bottom:18px;}
+.wrap #profile .pf_top .pic_info .my_info li em {display:inline-block; font-weight:500; color:#A09F9F; width:55px; margin-right:15px;}
+.wrap #profile .pf_top .visit_gh {text-align:center; margin-left:120px; position:relative; top:40px;}
+.wrap #profile .pf_top .visit_gh .speechbubble {}
+.wrap #profile .pf_top .visit_gh .speechbubble p {}
+.wrap #profile .pf_top .visit_gh .speechbubble p img {}
+.wrap #profile .pf_top .visit_gh .speechbubble p img:hover {/* 애니메이션 줄 예정 */}
+.wrap #profile .pf_top .visit_gh .speechbubble .speech {background:#000; color:#fff;}
+.wrap #profile .pf_btm {display:flex; width:max-content; margin:0 auto;}
+.wrap #profile .pf_btm > li {
+    padding:30px 40px; background:#fff; border-radius:20px; box-shadow: 0 3px 4px rgba(0,0,0,0.2);
+}
+.wrap #profile .pf_btm > li h3 {font-size:1.31rem; font-weight:800; letter-spacing:-0.04em; margin-bottom:30px;}
+.wrap #profile .pf_btm .skill {width:500px;}
+.wrap #profile .pf_btm .skill ul {display:flex; flex-flow:row wrap; justify-content:space-between;}
+.wrap #profile .pf_btm .skill ul li {width:calc((100% - 30px) / 2); margin-bottom:18px;}
+.wrap #profile .pf_btm .skill ul li p {font-size:0.94rem; letter-spacing:-0.02em; margin-bottom:10px;}
+
+.wrap #profile .pf_btm .skill ul li .level {width:100%; height:8px; border-radius:20px; background:#F0F0F0;}
+.wrap #profile .pf_btm .skill ul li .level .level_bar {
+    display:inline-block; width:50%; height:100%; background:#3c74f2; border-radius:20px;
+    position:relative; bottom:5px;
+}
+.wrap #profile .pf_btm .skill ul li:nth-child(1) .level .level_bar {/* 포토샵 */ width:95%;}
+.wrap #profile .pf_btm .skill ul li:nth-child(2) .level .level_bar {/* 깃허브 */ width:35%;}
+.wrap #profile .pf_btm .skill ul li:nth-child(3) .level .level_bar {/* 일러스트 */ width:95%;}
+.wrap #profile .pf_btm .skill ul li:nth-child(4) .level .level_bar {/* HTML5 */ width:50%;}
+.wrap #profile .pf_btm .skill ul li:nth-child(5) .level .level_bar {/* 엑셀 */ width:70%;}
+.wrap #profile .pf_btm .skill ul li:nth-child(6) .level .level_bar {/* CSS3 */ width:50%;}
+.wrap #profile .pf_btm .skill ul li:nth-child(7) .level .level_bar {/* Figma */ width:60%;}
+.wrap #profile .pf_btm .skill ul li:nth-child(8) .level .level_bar {/* Javascript */ width:40%;}
+.wrap #profile .pf_btm .skill ul li:nth-child(9) .level .level_bar {/* Notion */ width:50%;}
+.wrap #profile .pf_btm .skill ul li:nth-child(10) .level .level_bar {/* Jquery */ width:20%;}
+.wrap #profile .pf_btm .license {margin:0 35px;}
+.wrap #profile .pf_btm .license h3 {}
+.wrap #profile .pf_btm .license p {font-size:0.94rem; letter-spacing:-0.02em; margin-bottom:17px;}
+.wrap #profile .pf_btm .license p span {color:#a09f9f; display:inline-block; width:60px; margin-right:18px;}
+.wrap #profile .pf_btm .education {}
+.wrap #profile .pf_btm .education h3 {}
+.wrap #profile .pf_btm .education dl {margin-bottom:50px;}
+.wrap #profile .pf_btm .education dl > * {font-size:0.94rem; letter-spacing:-0.02em;}
+.wrap #profile .pf_btm .education dl dt {color:#a09f9f; margin-bottom:10px;}
+.wrap #profile .pf_btm .education dl dd {margin-bottom:18px;}
+.wrap #profile .pf_btm .education p:last-child {margin-top:17px;}
+.wrap #profile .pf_btm .education p {font-size:0.94rem; letter-spacing:-0.02em;}
+.wrap #profile .pf_btm .education p span {color:#a09f9f; display:inline-block; width:60px; margin-right:18px;}
+/* =================================================================3. education */
+.wrap #education {background:#000;}
+.wrap #education .center {}
+.wrap #education .center * {color:#fff;}
+/* li 공용 클래스 */
+.wrap #education .center .edu_top li .period,
+.wrap #education .center .edu_btm li .period {}
+.wrap #education .center .edu_top {}
+.wrap #education .center .edu_top li {}
+.wrap #education .center .edu_top .edu_up {}
+.wrap #education .center .edu_top li .period {}
+.wrap #education .center .edu_num > * {
+    display:inline-block; font-size:2.63rem; font-weight:900; letter-spacing:-0.02em;
+    width:calc(1400px / 7);
+}
+.wrap #education .center .edu_num li:nth-child(1) {color:#343434;}
+.wrap #education .center .edu_num li:nth-child(2) {color:#4F4F4F;}
+.wrap #education .center .edu_num li:nth-child(3) {color:#6C6C6C;}
+.wrap #education .center .edu_num li:nth-child(4) {color:#81AABC;}
+.wrap #education .center .edu_num li:nth-child(5) {color:#79BBFF;}
+.wrap #education .center .edu_num li:nth-child(6) {color:#2590FF;}
+.wrap #education .center .edu_num li:nth-child(7) {color:#306DF5;}
+.wrap #education .center .edu_line {width:100%; height:3px; background:#fff;}
+.wrap #education .center .edu_btm {}
+.wrap #education .center .edu_btm li {}
+.wrap #education .center .edu_top .edu_down {}
+.wrap #education .center .edu_btm li .period {}
+/* =================================================================4-1. dalba */
+.wrap #dalba {}
+/* =================================================================4-2. casetify */
+.wrap #casetify {}
+/* =================================================================4-3. arrr */
+.wrap #arrr {}
+/* =================================================================4-4. volkswagen */
+.wrap #volkswagen {}
+/* =================================================================5. graphic */
+.wrap #graphic {}
+/* =================================================================6. contact */
+.wrap #contact {}
