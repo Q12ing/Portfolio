@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- scrollTrigger 통합 script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <!--swiper-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!--design (css, favicon 등)-->
+    <style>
+        .parent {
+    height: 100vh;
+    background: lightgray;
+}
+
+.child {
+    width: 200px;
+    height: 200px;
+    background: blue;
+    opacity: 0; /* 초기 상태는 투명 */
+    animation: none; /* 키프레임 애니메이션 초기화 */
+}
+
+@keyframes myAnimation {
+    0% {
+    transform: translateY(0);
+    opacity: 0;
+    }
+    100% {
+    transform: translateY(-100px);
+    opacity: 1;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">애니메이션이 시작될 자식 요소</div>
+    </div>
+    <script>
+        // GSAP과 ScrollTrigger 설정
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".child", {
+  opacity: 0, // 초기 상태로 시작
+  y: 50, // 약간 아래에서 시작
+  duration: 1, // 애니메이션 시간
+    scrollTrigger: {
+    trigger: ".parent", // 부모 요소를 스크롤 트리거로 설정
+    start: "top bottom", // 부모가 화면의 bottom에 도달할 때 시작
+    end: "bottom top", // 부모가 화면을 벗어날 때 끝
+    scrub: true, // 스크롤에 따라 애니메이션 진행
+    onEnter: () => {
+      // 부모가 화면에 등장하면 자식 애니메이션 시작
+        gsap.to(".child", {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        });
+    },
+    },
+});
+
+    </script>
+</body>
+</html>
