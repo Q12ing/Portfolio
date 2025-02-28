@@ -57,6 +57,12 @@ contact.addEventListener ('click',function(e){//Contact Me, 소현 클릭시 마
     pfWrap.slideTo(8, 1000); //마지막 (9번째 슬라이드)
 });
 
+/* intro 클릭시 웹 프로젝트 페이지로 이동 */
+const introPf = document.querySelector('#intro .btn .introPf');
+introPf.addEventListener ('click',function(e){
+    e.preventDefault();
+    pfWrap.slideTo(3, 1000); //4번째 슬라이드
+});
 
 /* =================그래픽 디자인 스와이퍼 */
 
