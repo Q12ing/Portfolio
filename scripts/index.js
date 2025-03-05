@@ -118,7 +118,7 @@ for(let i of designProject){/* SNS디자인, 상세디자인 클릭 시 팝업 �
         popup_bg.children[0].scrollTo(0,0);
         popup_bg.children[0].style.marginTop = '100px';
         popup_bg.children[0].style.width = '800px';/* SNS,상세디자인 팝업 출력 크기 */
-        popup_bg.children[0].style.height = '800px';
+        popup_bg.children[0].style.height = '810px';
         popup_bg.children[0].children[0].src = i.src;
         pfWrap.mousewheel.disable();/* 마우스 휠 막기 */
     })

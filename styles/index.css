@@ -306,7 +306,7 @@ header .contact:hover {background:#5484f3;}
 .wrap #volkswagen .web_bnr {background-image:url(../images/web04.jpg);}
 /* =================================================================5. graphic */
 .wrap #graphic {background:#f0f0f0;}
-.wrap #graphic .grp_contents {width:80%; margin:140px auto 0; display:flex; align-items:flex-end;}
+.wrap #graphic .grp_contents {width:1600px; min-width:1600px; margin:140px auto 0; display:flex; align-items:flex-end;}
 .wrap #graphic .grp_contents .left {width:calc(100% - 450px); float:left;}
 .wrap #graphic .grp_contents .left .title {background:#f0f0f0; padding:20px;}
 .wrap #graphic .grp_contents .left .title .mytag {}
